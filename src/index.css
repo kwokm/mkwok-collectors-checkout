@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+/*
+ * Tokens from ../DESIGN.md — "PSA Marketplace: Style Reference".
+ * The slab is the hero; the UI stays monochrome and lets the graded
+ * collectible carry the color. Red is punctuation, never decoration.
+ */
+@theme {
+  --color-psa-red: #ee0403;
+  --color-ink: #0f0f0f;
+  --color-charcoal: #212121;
+  --color-slate: #48494a;
+  --color-smoke: #6c6e6f;
+  --color-hairline: #eaeaea;
+  --color-tint: #f5f5f5;
+  --color-fog: #fafafa;
+  --color-paper: #ffffff;
+
+  /* Area Normal → Instrument Sans, the closest free alternative per DESIGN.md */
+  --font-area: 'Instrument Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif-accent: 'Times New Roman', Times, serif;
+
+  --shadow-soft: rgba(0, 0, 0, 0.08) 0px 4px 16px 0px;
+}
+
+html {
+  color-scheme: light;
+  overscroll-behavior: none;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #212121;
+  font-family: var(--font-area);
+  /* Instrument Sans variable — 450 as the working regular, a touch of the
+     grotesque presence Area Normal carries at 400 */
+  font-weight: 450;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+::selection {
+  background: rgba(238, 4, 3, 0.14);
+}
